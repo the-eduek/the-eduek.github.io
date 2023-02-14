@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: $bgPrimary;
+  overscroll-behavior: none;
+}
+
+main {
+  color: $darkGrey;
+  font-family: 'Sora', sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  min-height: 100vh;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:focus {
+    border-radius: 0.25rem;
+    outline: 0.125rem solid $primary
+  }
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  padding: 1.125rem 0 2rem;
+  text-shadow: 0 2px 5px rgba($primary, 0.15);
+  text-transform: lowercase;
+}
