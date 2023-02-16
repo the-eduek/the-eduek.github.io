@@ -12,6 +12,10 @@
   }
 };
 
+%padding {
+  padding: 0 1.25rem 8.5vh;
+}
+
 .header {
   background-color: #fff;
   font-size: 0.875rem;
@@ -43,7 +47,7 @@
 }
 
 .hero {
-  padding: 5rem 1.25rem 0rem;
+  padding: 5rem 1.25rem 8vh;
 
   h1,
   h2 {
@@ -52,78 +56,74 @@
     flex-direction: column;
     font-family: Jellee, sans-serif;
     font-size: 13vw;
-    text-shadow: 0 2px 5px rgba($primary, 0.15);
+    text-shadow: 0 2px 5px rgba($primary, 0.25);
     text-transform: uppercase;
   }
 
   h2 {
+    color: $primary;
     justify-content: flex-end;
     padding: 1.5rem 0 0;
-    text-align: right
+    text-align: right;
+    text-shadow: 0 2px 5px rgba($darkGrey, 0.25);
   } 
 }
 
 .about {
-  padding: 8vh 1.25rem;
+  @extend %padding;
   width: 85%;
 
-  article {
-    a,
-    b {
-      color: $primary;
-      font-weight: 500;
+  a,
+  b {
+    color: $primary;
+    font-weight: 500;
+  }
+
+  a {
+    display: inline-flex;
+    overflow: hidden;
+    position: relative;
+    
+    &::after {
+      @extend %transition;
+      background-color: rgba($primary, 0.25);
+      content: "";
+      display: inline-block;
+      left: 0;
+      position: absolute;
+      height: 55%;
+      bottom: -0.125rem;
+      transform: translateY(100%);
+      width: 100%;
     }
-  
-    a {
-      display: inline-flex;
-      overflow: hidden;
-      position: relative;
-      
+
+    &:hover {
       &::after {
-        @extend %transition;
-        background-color: rgba($primary, 0.15);
-        content: "";
-        display: inline-block;
-        left: 0;
-        position: absolute;
-        height: 55%;
-        bottom: -0.125rem;
-        transform: translateY(100%);
-        width: 100%;
-      }
-  
-      &:hover {
-        &::after {
-          transform: translateY(-0.125rem);
-        }
-      }
-    }
-  
-    p {
-      color: $lightGrey;
-      font-weight: 300;
-      letter-spacing: -0.5px;
-      line-height: 1.25;
-      padding: 0 0 1.125rem;
-      text-transform: lowercase;
-  
-      &:last-child {
-        padding: 0;
-  
-        span {
-          white-space: nowrap;
-        }
+        transform: translateY(-0.125rem);
       }
     }
   }
 
-  .contact {
-    display: none;
+  p {
+    color: $lightGrey;
+    font-weight: 300;
+    letter-spacing: -0.5px;
+    line-height: 1.25;
+    padding: 0 0 1.125rem;
+    text-transform: lowercase;
+
+    &:last-child {
+      padding: 0;
+
+      span {
+        white-space: nowrap;
+      }
+    }
   }
 }
 
 .works {
-  padding: 0 1.25rem 8vh;
+  @extend %padding;
 
   .project {
     list-style: none;
@@ -212,7 +212,7 @@
         text-transform: lowercase;
 
         &:last-child {
-          color: rgba($primary, 0.675);
+          color: $primary;
         }
       }
     }
@@ -235,7 +235,7 @@
 }
 
 .contact {
-  padding: 0 1.5rem 8vh;
+  @extend %padding;
 
   ul {
     display: flex;
@@ -288,12 +288,10 @@
 }
 
 @media (min-width: 410px) {
-  .about {   
-    article { 
-      p:last-child {
-        span {
-          white-space: normal;
-        }
+  .about {  
+    p:last-child {
+      span {
+        white-space: normal;
       }
     }
   }
@@ -308,10 +306,6 @@
 
   .hero {
     padding: 10vh 2rem;
-  
-    h2 {
-      color: $primary;
-    } 
   }
 
   .about {
@@ -354,16 +348,9 @@
 }
 
 @media (min-width: 1280px) {
-  .wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 7.25vw 7.25vw;
-  }
-
   .header {
     div {
       padding: 1.5rem 7.25vw;
-      font-size: 1rem;
     }
   }
 
@@ -375,31 +362,22 @@
       flex-direction: row;
       font-size: 7vw;
 
-      span{
+      span {
         margin: 0 3vw 0 0;
       }
     }
   }
 
-  .about {
+  .wrap {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
+    padding: 0 7.25vw 7.25vw;
+    position: relative;
+  }
+
+  .about {
     padding: 0;
     width: 37.5%;
-
-    .contact {
-      display: block;
-      padding: 0 0 0;
-
-      h3 {
-        display: none;
-      }
-
-      ul {
-        padding: 0;
-      }
-    }
   }
 
   .works {
@@ -411,11 +389,22 @@
     }
 
     ul {
-      gap: 3.5vw 6.5vw;
+      gap: 4.5vw 6.5vw;
     }
   }
 
   .contact {
-    display: none;
+    bottom: 7.25vw;
+    left: 7.25vw;
+    padding: 0;
+    position: absolute;
+
+    h3 {
+      display: none;
+    }
+
+    ul {
+      padding: 0;
+    }
   }
 }
