@@ -1,4 +1,4 @@
-import { setUpTimer } from './src/functions/timer.js';
+import setUpTimer from './src/functions/timer.js';
 
 const hourElement = document.querySelector('[data-hour]');
 const minuteElement = document.querySelector('[data-minute]');

@@ -1,4 +1,4 @@
-export function setUpTimer(hourElement, minuteElement, meridiemElement) {
+export default (hourElement, minuteElement, meridiemElement) => {
   function setTime() {
     const date = new Date();
     const hour = date.getHours();
