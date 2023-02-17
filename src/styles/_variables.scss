@@ -2,16 +2,3 @@ $bgPrimary: #f9a8260d;
 $darkGrey: #4C4149;
 $lightGrey: #63656a;
 $primary: #942a8b;
-
-%space-between {
-  display: flex;
-  justify-content: space-between;
-}
-
-%tight {
-  letter-spacing: -0.75px;
-}
-
-%transition {
-  transition: transform 300ms ease-out;
-}

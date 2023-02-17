@@ -16,6 +16,19 @@
   padding: 0 1.25rem 8.5vh;
 }
 
+%space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+%tight {
+  letter-spacing: -0.75px;
+}
+
+%transition {
+  transition: all 300ms ease-out;
+}
+
 .header {
   background-color: #fff;
   font-size: 0.875rem;
@@ -56,7 +69,7 @@
     flex-direction: column;
     font-family: Jellee, sans-serif;
     font-size: 13vw;
-    text-shadow: 0 2px 5px rgba($primary, 0.25);
+    text-shadow: 0 2px 5px rgba($primary, 0.275);
     text-transform: uppercase;
   }
 
@@ -65,8 +78,26 @@
     justify-content: flex-end;
     padding: 1.5rem 0 0;
     text-align: right;
-    text-shadow: 0 2px 5px rgba($darkGrey, 0.25);
-  } 
+    text-shadow: 0 2px 5px rgba($darkGrey, 0.275);
+
+    span.word-wrap {
+      span:hover {
+        color: rgba($primary, 0.75);
+        text-shadow: 0 2px 5px #fafafa;
+      }
+    }
+  }
+  
+  span.word-wrap {
+    span {
+      @extend %transition;
+
+      &:hover {
+        color: rgba($darkGrey, 0.75);
+        text-shadow: 0 2px 5px #fafafa;
+      }
+    }
+  }
 }
 
 .about {
@@ -362,7 +393,7 @@
       flex-direction: row;
       font-size: 7vw;
 
-      span {
+      span.word-wrap {
         margin: 0 3vw 0 0;
       }
     }
