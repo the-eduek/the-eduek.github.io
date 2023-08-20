@@ -1,8 +1,8 @@
 export default function (hourElement: HTMLElement, minuteElement: HTMLElement, meridiemElement: HTMLElement): void {
-  function setTime() {
-    const date = new Date();
-    const hour = date.getHours();
-    const minute = date.getMinutes();
+  function setTime() : void {
+    const date: Date = new Date();
+    const hour: number = date.getHours();
+    const minute: number = date.getMinutes();
 
     function displayHour(hour: number): string {
       if (hour === 0) return `12`;

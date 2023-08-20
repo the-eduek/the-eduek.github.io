@@ -4,9 +4,4 @@ const hourElement = <HTMLElement>document.querySelector('[data-hour]')!;
 const minuteElement = <HTMLElement>document.querySelector('[data-minute]')!;
 const meridiemElement = <HTMLElement>document.querySelector('[data-meridiem]')!;
 
-hourElement.addEventListener("click", (e) => {
-  console.log("hello")
-
-})
-
 setupTImer(hourElement, minuteElement, meridiemElement);
