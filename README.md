@@ -1,5 +1,3 @@
-my 2k23 portfolio site
+here's eduek's 2023 portfolio site 
 
-@todo
-- animations
-- complete responsiveness
+🔗 - [https://the-eduek.github.io/]
