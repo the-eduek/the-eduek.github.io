@@ -4,9 +4,9 @@ $primary: #c66be4;
 $textWhite: #e9e1e9;
 $white: #fff;
 
-$fontInter: "Inter", Helvetica, Arial, sans-serif;
+$fontSans: "Karla", "Inter", Helvetica, Arial, sans-serif;
 
 @mixin maxContent {
   margin: 0 auto;
-  max-width: 42rem;
+  max-width: 42.475rem;
 }
