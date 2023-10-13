@@ -1,0 +1,57 @@
+body.dark {
+  background-color: map-get($colorsDark, "bg");
+  color: map-get($colorsDark, "text");
+
+  p {
+    a {
+      color: map-get($colorsDark, "textLight");
+      text-decoration-color: map-get($colorsDark, "primary");
+    }
+  }
+
+  header {
+    h2 {
+      a {
+        color: map-get($colorsDark, "primary");
+      }
+
+      span.icon {
+        color: map-get($colorsDark, "textLight");
+      }
+    }
+  }
+
+  article {
+    p {
+      strong {
+        color: map-get($colorsDark, "textStrong");
+      }
+    }
+  }
+
+  .projects {
+    > h3 {
+      color: map-get($colorsDark, "textLight");
+    }
+
+    .project {
+      &__title {
+        color: map-get($colorsDark, "textStrong");
+
+        span.icon {
+          color: map-get($colorsDark, "primary");
+        }
+      }
+    }
+  }
+
+  footer {
+    div {
+      color: map-get($colorsDark, "textLight");
+    }
+
+    span.line {
+      background-color: map-get($colorsDark, "primary");
+    }
+  }
+}

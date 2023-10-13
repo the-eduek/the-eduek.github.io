@@ -1,10 +1,20 @@
-$bgDark: #191919;
-$lightGrey: #bbb;
-$primary: #c66be4;
-$textWhite: #e9e1e9;
-$white: #fff;
-
 $fontSans: "Karla", "Inter", Helvetica, Arial, sans-serif;
+
+$colors: (
+  "bg": #191919,
+  "text": #e9e1e9,
+  "primary": #c66be4,
+  "textLight": #bbb,
+  "textStrong": #fff,
+);
+
+$colorsDark: (
+  "bg": #eee,
+  "primary": #8c22af,
+  "text": #111,
+  "textLight": #444,
+  "textStrong": #222,
+);
 
 @mixin maxContent {
   margin: 0 auto;
