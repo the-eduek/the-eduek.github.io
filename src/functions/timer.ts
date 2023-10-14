@@ -13,7 +13,8 @@ type HourString =
   | "11"
   | "12";
 
-export default function (
+// timer function
+function timerFn(
   hourElement: HTMLElement,
   minuteElement: HTMLElement,
   meridiemElement: HTMLElement
@@ -39,3 +40,11 @@ export default function (
   setTime();
   setInterval(setTime, 1000);
 }
+
+// timer display
+const hourElement: HTMLSpanElement = document.querySelector("[data-hour]")!;
+const minuteElement: HTMLSpanElement = document.querySelector("[data-minute]")!;
+const meridiemElement: HTMLSpanElement =
+  document.querySelector("[data-meridiem]")!;
+
+timerFn(hourElement, minuteElement, meridiemElement);
