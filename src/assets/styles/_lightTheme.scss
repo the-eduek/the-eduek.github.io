@@ -1,0 +1,62 @@
+body.light {
+  background-color: map-get($colorsLight, "bg");
+  color: map-get($colorsLight, "text");
+
+  p {
+    a {
+      color: map-get($colorsLight, "textLight");
+      text-decoration-color: map-get($colorsLight, "primary");
+    }
+  }
+
+  header {
+    h2 {
+      a {
+        color: map-get($colorsLight, "primary");
+      }
+
+      span.icon {
+        color: map-get($colorsLight, "textLight");
+      }
+    }
+  }
+
+  article {
+    p {
+      strong {
+        color: map-get($colorsLight, "textStrong");
+      }
+    }
+  }
+
+  .projects {
+    > h3 {
+      color: map-get($colorsLight, "textLight");
+    }
+
+    .project {
+      &__title {
+        color: map-get($colorsLight, "textStrong");
+
+        span.icon {
+          color: map-get($colorsLight, "primary");
+        }
+      }
+    }
+  }
+
+  footer {
+    div {
+      color: map-get($colorsLight, "textLight");
+    }
+
+    button {
+      border: solid map-get($colorsLight, "primary");
+      border-width: 0 1px 0 0;
+    }
+
+    span.line {
+      background-color: map-get($colorsLight, "primary");
+    }
+  }
+}
