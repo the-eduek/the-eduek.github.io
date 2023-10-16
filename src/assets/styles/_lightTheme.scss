@@ -48,11 +48,13 @@ body.light {
   footer {
     div {
       color: map-get($colorsLight, "textLight");
-    }
 
-    button {
-      border: solid map-get($colorsLight, "primary");
-      border-width: 0 1px 0 0;
+      p {
+        &:first-of-type {
+          border: solid map-get($colorsLight, "primary");
+          border-width: 0 0 0 1px;
+        }
+      }
     }
 
     span.line {
