@@ -47,13 +47,11 @@ a {
 
 p {
   a {
-    span {
-      &.text {
-        color: map-get($colors, "textLight");
-        text-decoration: underline;
-        text-decoration-color: map-get($colors, "primary");
-        text-underline-offset: 0.25rem;
-      }
+    span.text {
+      color: map-get($colors, "textLight");
+      text-decoration: underline;
+      text-decoration-color: map-get($colors, "primary");
+      text-underline-offset: 0.25rem;
     }
   }
 }

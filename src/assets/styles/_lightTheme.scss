@@ -4,8 +4,10 @@ body.light {
 
   p {
     a {
-      color: map-get($colorsLight, "textLight");
-      text-decoration-color: map-get($colorsLight, "primary");
+      span.text {
+        color: map-get($colorsLight, "textLight");
+        text-decoration-color: map-get($colorsLight, "primary");
+      }
     }
   }
 
