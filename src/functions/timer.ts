@@ -17,11 +17,13 @@ type HourString =
 function timerFn(
   hourElement: HTMLElement,
   minuteElement: HTMLElement,
-  meridiemElement: HTMLElement
+  meridiemElement: HTMLElement,
+  yearElement: HTMLElement,
 ): void {
   function setTime(): void {
     const date = new Date();
     const hour = date.getHours();
+    const year = date.getFullYear();
     const minute = date.getMinutes();
 
     function displayHour(hour: number): HourString {
@@ -35,6 +37,7 @@ function timerFn(
     hourElement.innerHTML = displayHour(hour);
     minuteElement.innerHTML = minute < 10 ? `0${minute}` : `${minute}`;
     meridiemElement.innerHTML = hour < 12 ? `AM` : `PM`;
+    yearElement.innerHTML = year.toString();
   }
 
   setTime();
@@ -44,7 +47,8 @@ function timerFn(
 // timer display
 const hourElement: HTMLSpanElement = document.querySelector("[data-hour]")!;
 const minuteElement: HTMLSpanElement = document.querySelector("[data-minute]")!;
+const yearElement: HTMLSpanElement = document.querySelector("[data-year]")!;
 const meridiemElement: HTMLSpanElement =
   document.querySelector("[data-meridiem]")!;
 
-timerFn(hourElement, minuteElement, meridiemElement);
+timerFn(hourElement, minuteElement, meridiemElement, yearElement);
