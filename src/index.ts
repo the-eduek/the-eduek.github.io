@@ -1,2 +1,2 @@
+import "@/functions/theme";
 import "@/functions/timer";
-import "@/functions/theme"
